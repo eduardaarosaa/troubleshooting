@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Http\View\Composers;
-
 use Illuminate\View\View;
-
 class CurrentDateComposer
 {
     /**
@@ -12,8 +9,8 @@ class CurrentDateComposer
      * @param  View stw  $view
      * @return void
      */
-    public function compose(View $view)
+    public function compose()
     {
-        $view->with('current_date',date("d/m/Y", mktime(0, 0, 0, 2, 1, 2019)));
+        return view('contract/show')->with('current_date',date("d/m/Y", mktime(0, 0, 0, 2, 1, 2019)));
     }
 }

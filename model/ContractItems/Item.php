@@ -1,4 +1,6 @@
-<?php namespace Model\ContractItems;
+<?php 
+
+namespace Model\ContractItems;
 
 use Illuminate\Database\Eloquent\Model;
 

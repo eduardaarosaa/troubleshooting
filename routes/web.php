@@ -15,8 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
 Route::get('/contract/{customer_id}/{contract_id}', [
     'as' => 'contract.show',
     'uses' => 'ContractController@show'
-])->defaults('contract_id', 'LOREN');
+])->defaults('LOREN', '$contract_id');
+
+
 
