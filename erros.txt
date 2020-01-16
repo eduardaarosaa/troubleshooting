@@ -1,0 +1,10 @@
+1 - No controller ContractController, faltava chamar a model que estava sendo usada - Use Model\Customer\CustomerRepository; 
+2 - Na view show, o @section estava com o parâmetro errado, era content ao inves de body.
+3 - O nome do método do controller estava index e era show. 
+4 - No controller ContractController, faltava chamar App\Http\view\composers para fazer a utilização da data gravada no método compose. 
+5 - No método compose dentro de  App\Http\view\composers\CurrentDateComposer ele referenciava a data a uma variavel $view, precisei dar um return e referência a view show para exibir a data. 
+6 - Pegar o metodo compose, passar no controller ContractController  e passar para view. 
+7 - No model Contract, na função scope($query) não retorna a campo contract_id, selecionava apenas description e customer_id.
+8 - Como a chave primária da tabela contract era uma string eu definir a $incrementing como propriedade pública no model Contract como false, já que o padrão da chave primária é valor inteiro e incremental. 
+9 - Faltava gerar a key do projeto. 
+10 - Para exibir os itens eu chamei o model Item no meu ContractController e retornei os valores. 
