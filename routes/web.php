@@ -17,10 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/contract/{customer_id}/{contract_id}', [
-    'as' => 'contract.show',
-    'uses' => 'ContractController@show'
-])->defaults('LOREN', '$contract_id');
-
+Route::get('/contract/{customer_id}/{contract_id}',
+	'ContractController@show')->defaults('LOREN','$contract_id');
 
 
