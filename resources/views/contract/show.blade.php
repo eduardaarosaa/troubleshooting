@@ -14,8 +14,9 @@
     <br>
     <p>Estão incluídos no contrato os seguintes items:</p>
     <ul>
-
-
+        @foreach($contract_items as $item)
+            <li><span class="font-weight-bold">{!! $item->description !!}</span></li>
+        @endforeach
 
     </ul>
     <p>Acesso em <span class="font-weight-bold">{{$dia}}</span></p>
